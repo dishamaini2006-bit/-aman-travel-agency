@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aman Travel Agency | Explore India</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f9ff;
+            color: #222;
+        }
+
+        header {
+            background: #087ea4;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 22px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            min-height: 520px;
+            background:
+                linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+                url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 30px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 21px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff8c42;
+            color: white;
+            padding: 13px 28px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 55px 8%;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .title h2 {
+            font-size: 34px;
+            color: #087ea4;
+            margin-bottom: 10px;
+        }
+
+        .destinations,
+        .packages {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,.12);
+        }
+
+        .card img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card h3 {
+            color: #087ea4;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff6b35;
+            margin: 12px 0;
+        }
+
+        .about {
+            background: white;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 850px;
+            margin: auto;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        .form-box {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,.12);
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 13px;
+            margin: 8px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        button {
+            width: 100%;
+            border: none;
+            background: #087ea4;
+            color: white;
+            padding: 14px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #065f7c;
+        }
+
+        footer {
+            background: #073b4c;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        @media (max-width: 800px) {
+            header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0 7px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .destinations,
+            .packages {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">✈️ Aman Travel Agency</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#packages">Packages</a>
+        <a href="#enquiry">Enquiry</a>
+    </nav>
+</header>
+
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+    <div>
+        <h1>Explore India</h1>
+
+        <p>
+            Discover beautiful destinations and create unforgettable memories.
+        </p>
+
+        <a href="#packages" class="btn">Explore Packages</a>
+    </div>
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about">
+
+    <div class="title">
+        <h2>About Aman Travel Agency</h2>
+    </div>
+
+    <p>
+        Aman Travel Agency helps travellers discover exciting destinations
+        across India. From peaceful mountains and beautiful beaches to
+        historical places, we make travel planning simple, comfortable and
+        memorable.
+    </p>
+
+</section>
+
+
+<!-- DESTINATIONS -->
+
+<section id="destinations">
+
+    <div class="title">
+        <h2>Popular Destinations</h2>
+        <p>Choose your next adventure.</p>
+    </div>
+
+    <div class="destinations">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=900&q=80">
+
+            <div class="card-content">
+                <h3>🏖️ Goa</h3>
+                <p>
+                    Enjoy beautiful beaches, relaxing holidays and exciting
+                    experiences.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=900&q=80">
+
+            <div class="card-content">
+                <h3>🏔️ Manali</h3>
+                <p>
+                    Experience mountains, adventure activities and peaceful
+                    natural beauty.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=900&q=80">
+
+            <div class="card-content">
+                <h3>🏰 Rajasthan</h3>
+                <p>
+                    Explore royal palaces, forts, culture and traditional
+                    Indian heritage.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PACKAGES -->
+
+<section id="packages">
+
+    <div class="title">
+        <h2>Holiday Packages</h2>
+        <p>Choose a package for your next journey.</p>
+    </div>
+
+    <div class="packages">
+
+        <div class="card">
+            <div class="card-content">
+                <h3>🏔️ Manali Escape</h3>
+
+                <p>3 Nights / 4 Days</p>
+
+                <div class="price">₹9,999</div>
+
+                <p>
+                    Hotel stay, sightseeing and local travel.
+                </p>
+
+                <br>
+
+                <a href="#enquiry" class="btn">Book Now</a>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-content">
+                <h3>🏖️ Goa Holiday</h3>
+
+                <p>4 Nights / 5 Days</p>
+
+                <div class="price">₹12,999</div>
+
+                <p>
+                    Hotel stay, sightseeing and beach experiences.
+                </p>
+
+                <br>
+
+                <a href="#enquiry" class="btn">Book Now</a>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-content">
+                <h3>🏰 Rajasthan Tour</h3>
+
+                <p>5 Nights / 6 Days</p>
+
+                <div class="price">₹15,999</div>
+
+                <p>
+                    Explore forts, palaces and cultural attractions.
+                </p>
+
+                <br>
+
+                <a href="#enquiry" class="btn">Book Now</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ENQUIRY -->
+
+<section id="enquiry">
+
+    <div class="title">
+        <h2>Plan Your Trip</h2>
+        <p>Send us your travel enquiry.</p>
+    </div>
+
+    <div class="form-box">
+
+        <form onsubmit="submitForm(event)">
+
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter your name" required>
+
+            <label>Email Address</label>
+            <input type="email" placeholder="Enter your email" required>
+
+            <label>Choose Destination</label>
+
+            <select required>
+                <option value="">Select destination</option>
+                <option>Manali</option>
+                <option>Goa</option>
+                <option>Rajasthan</option>
+            </select>
+
+            <label>Message</label>
+
+            <textarea
+                placeholder="Tell us about your travel requirements..."
+                required>
+            </textarea>
+
+            <button type="submit">
+                Send Enquiry ✈️
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="about">
+
+    <div class="title">
+        <h2>Contact Aman Travel Agency</h2>
+    </div>
+
+    <p>
+        📧 Email: amantravel@example.com
+        <br><br>
+        📞 Phone: +91 XXXXX XXXXX
+        <br><br>
+        📍 Ludhiana, Punjab, India
+    </p>
+
+</section>
+
+
+<footer>
+
+    <h3>✈️ Aman Travel Agency</h3>
+
+    <p>
+        Explore. Travel. Create Memories.
+    </p>
+
+    <br>
+
+    <p>
+        © 2026 Aman Travel Agency | Digital Marketing Minor Project
+    </p>
+
+</footer>
+
+
+<script>
+
+function submitForm(event) {
+
+    event.preventDefault();
+
+    alert(
+        "Thank you! Your travel enquiry has been submitted successfully."
+    );
+
+}
+
+</script>
+
+</body
